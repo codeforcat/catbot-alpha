@@ -1,24 +1,17 @@
 {
-  "name": "catbot-alpha",
+  "name": "pizza-bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codeforcat/catbot-alpha.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/codeforcat/catbot-alpha/issues"
-  },
-  "homepage": "https://github.com/codeforcat/catbot-alpha#readme",
   "dependencies": {
-    "bot-express": "^0.5.35",
+    "bot-express": "^0.5.31",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4"
   }
 }

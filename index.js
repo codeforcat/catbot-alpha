@@ -5,7 +5,7 @@
 */
 const server = require("express")();
 const bot_express = require("bot-express");
-
+require('dotenv').config();
 /*
 ** Middleware Configuration
 */
