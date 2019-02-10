@@ -11,7 +11,7 @@ module.exports = class FoodSelect {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      opening: {
+      foodselect: {
         message_to_confirm: {
           type: "template",
           altText: "何か気になることある？",
