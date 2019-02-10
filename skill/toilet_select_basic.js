@@ -11,7 +11,8 @@ module.exports = class ToiletSelectBasic {
           template: {
             type: "buttons",
             text: "トイレの基本は、こんなことがあるよ。何を知りたい？",
-            actions: [{
+            actions: [
+              {
                 type: "postback",
                 label: "何を用意すればいい？",
                 displayText: "何を用意すればいい？",
