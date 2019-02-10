@@ -120,6 +120,6 @@ module.exports = class Welcome {
     let intent_name = context.confirmed.opening.data;
     await bot.switch_skill({
       name: intent_name
-    })
+    });
   }
 };
