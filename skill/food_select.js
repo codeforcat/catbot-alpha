@@ -31,8 +31,12 @@ module.exports = class FoodSelect {
                     type: "postback",
                     label: "いつあげればいいの?",
                     data: "food_answer_when"
-                  }
-                ]
+                  },
+                  {
+                    type: "postback",
+                    label: "いつあげればいいの?",
+                    data: "food_answer_when"
+                  }                ]
               },
               {
                 title: "こんな物はどうなの？",
