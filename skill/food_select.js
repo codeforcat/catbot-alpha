@@ -22,7 +22,7 @@ module.exports = class FoodSelect {
                 thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
                 title: "何をあげればいいの？",
-                text: "a",
+                text: "何",
                 actions: [
                   {
                     type: "postback",
@@ -35,7 +35,7 @@ module.exports = class FoodSelect {
                 thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
                 title: "いつあげればいいの",
-                text: "a",
+                text: "いつ",
                 actions: [
                   {
                     type: "postback",
@@ -48,7 +48,7 @@ module.exports = class FoodSelect {
                 thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
                 title: "おやつは？",
-                text: "af",
+                text: "おやつ",
                 actions: [
                   {
                     type: "postback",
@@ -61,7 +61,7 @@ module.exports = class FoodSelect {
                 thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
                 title: "鰹節は？",
-                text: "a",
+                text: "food_answer_katsuo",
                 actions: [
                   {
                     type: "postback",
@@ -74,7 +74,7 @@ module.exports = class FoodSelect {
                 thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
                 title: "水のあげかたは？",
-                text: "a",
+                text: "水は",
                 actions: [
                   {
                     type: "postback",
