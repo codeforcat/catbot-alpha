@@ -5,7 +5,7 @@ module.exports = class FoodSelect {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      another_q: {
+      food: {
         message_to_confirm: {
           type: "template",
           altText: "他にも気になることある？",
@@ -34,7 +34,7 @@ module.exports = class FoodSelect {
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["toilet-why-multi", "toilet-types", "toilet-where"].includes(value.data)){
+          if (["food_select_water", "food_select_donot", "food_select_basic"].includes(value.data)){
             return value;
           }
           throw new Error();
