@@ -1,65 +1,51 @@
 "use strict";
 
 module.exports = class FoodSelect {
-  async begin(bot, event, context) {
-    await bot.queue({
-      type: "text",
-      text: "ご飯の、どんなことが気になっているのかい？"
-    });
-  }
 
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      foodselect: {
+      another_q: {
         message_to_confirm: {
           type: "template",
-          altText: "何か気になることある？",
+          altText: "他にも気になることある？",
           template: {
-            type: "carousel",
-            columns: [
-              {
-                title: "何をいつ？",
-                text: "どんなご飯を、いつあげたらいいのかわからない",
-                actions: [
-                  {
-                    type: "postback",
-                    label: "何をあげればいいの？",
-                    data: "food_answer_dry"
-                  },
-                  {
-                    type: "postback",
-                    label: "いつあげればいいの?",
-                    data: "food_answer_when"
-                  },
-                  {
-                    type: "postback",
-                    label: "",
-                    data: ""
-                  }                ]
+            type: "buttons",
+            text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？"
+            actions: [{
+                type: "postback",
+                label: "ご飯の基本",
+                displayText: "ご飯の基本",
+                data: "food_select_basic"
               },
               {
-                title: "こんな物はどうなの？",
-                text: "おやつや、お水とかはどうあげたらいいんだろう？",
-                actions: [
-                  {
-                    type: "postback",
-                    label: "おやつは？",
-                    data: "food_answer_snack"
-                  },
-                  {
-                    type: "postback",
-                    label: "鰹節は？",
-                    data: "food_answer_katsuo"
-                  },
-                  {
-                    type: "postback",
-                    label: "水のあげかたは？",
-                    data: "food_answer_water"
-                  }
-                ]
+                type: "postback",
+                label: "いろんな種類があるけど？",
+                displayText: "いろんな種類があるけど？",
+                data: "food_select_donot"
+              },
+              {
+                type: "postback",
+                label: "水のあげ方は？",
+                displayText: "水のあげ方は？",
+                data: "food_select_water"
               }
             ]
+          }
+        },
+        parser: async (value, bot, event, context) => {
+          if (["toilet-why-multi", "toilet-types", "toilet-where"].includes(value.data)){
+            return value;
+          }
+          throw new Error();
+        },
+        reaction: async (error, value, bot, event, context) => {
+          if (error){
+            await bot.reply({
+              type: "text",
+              text: "にゃ？\nもう一度言ってほしいにゃ。"
+            });
+            await bot.init();
           }
         }
       }
@@ -67,9 +53,10 @@ module.exports = class FoodSelect {
   }
 
   async finish(bot, event, context) {
-    let intent_name = context.confirmed.opening.data;
+    let intent_name = context.confirmed.another_q.data;
+    console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name
-    })
+    });
   }
 };
