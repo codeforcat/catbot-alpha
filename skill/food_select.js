@@ -11,7 +11,7 @@ module.exports = class FoodSelect {
           altText: "他にも気になることある？",
           template: {
             type: "buttons",
-            text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？"
+            text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
             actions: [{
                 type: "postback",
                 label: "ご飯の基本",
