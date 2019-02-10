@@ -19,7 +19,6 @@ module.exports = class FoodSelect {
             type: "carousel",
             columns: [
               {
-                imageBackgroundColor: "#FFFFFF",
                 title: "何をいつ？",
                 text: "どんなご飯を、いつあげたらいいのかわからない",
                 actions: [
@@ -36,7 +35,6 @@ module.exports = class FoodSelect {
                 ]
               },
               {
-                imageBackgroundColor: "#FFFFFF",
                 title: "こんな物はどうなの？",
                 text: "おやつや、お水とかはどうあげたらいいんだろう？",
                 actions: [
