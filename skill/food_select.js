@@ -34,8 +34,8 @@ module.exports = class FoodSelect {
                   },
                   {
                     type: "postback",
-                    label: "いつあげれああばいいの?",
-                    data: "food_answer_when"
+                    label: "",
+                    data: ""
                   }                ]
               },
               {
