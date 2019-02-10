@@ -53,7 +53,7 @@ module.exports = class FoodSelect {
   }
 
   async finish(bot, event, context) {
-    let intent_name = context.confirmed.another_q.data;
+    let intent_name = context.confirmed.food.data;
     console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name
