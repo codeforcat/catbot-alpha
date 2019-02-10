@@ -19,67 +19,41 @@ module.exports = class FoodSelect {
             type: "carousel",
             columns: [
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
-                title: "何をあげればいいの？",
-                text: "何",
+                title: "何をいつ？",
+                text: "どんなご飯を、いつあげたらいいのかわからない",
                 actions: [
                   {
                     type: "postback",
-                    label: "どうしよう？",
+                    label: "何をあげればいいの？",
                     data: "food_answer_dry"
-                  }
-                ]
-              },
-              {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
-                title: "いつあげればいいの",
-                text: "いつ",
-                actions: [
+                  },
                   {
                     type: "postback",
-                    label: "これが気になる",
+                    label: "いつあげればいいの?",
                     data: "food_answer_when"
                   }
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
                 imageBackgroundColor: "#FFFFFF",
-                title: "おやつは？",
-                text: "おやつ",
+                title: "こんな物はどうなの？",
+                text: "おやつや、お水とかはどうあげたらいいんだろう？",
                 actions: [
                   {
                     type: "postback",
-                    label: "好きな場所",
+                    label: "おやつは？",
                     data: "food_answer_snack"
-                  }
-                ]
-              },
-              {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
-                title: "鰹節は？",
-                text: "food_answer_katsuo",
-                actions: [
+                  },
                   {
                     type: "postback",
-                    label: "できるかな？",
+                    label: "鰹節は？",
                     data: "food_answer_katsuo"
-                  }
-                ]
-              },
-              {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
-                title: "水のあげかたは？",
-                text: "水は",
-                actions: [
+                  },
                   {
                     type: "postback",
-                    label: "なんだろう？",
-                    data: "food_answer_where"
+                    label: "水のあげかたは？",
+                    data: "food_answer_water"
                   }
                 ]
               }
