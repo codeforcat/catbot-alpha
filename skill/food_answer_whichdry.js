@@ -11,7 +11,7 @@ module.exports = class FoodAnswerDry {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      answer: {
+      another_q: {
         message_to_confirm: {
           type: "template",
           altText: "もっと質問あるニャ？",
@@ -39,7 +39,7 @@ module.exports = class FoodAnswerDry {
   async finish(bot, event, context) {
     console.log(context.confirmed);
     let intent_name = "food_quiz_noteat";
-    if (context.confirmed.answer.data == "はい") {
+    if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
         type: "text",
         text: "どんなことが聞きたい？"

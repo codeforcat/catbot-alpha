@@ -1,11 +1,11 @@
 "use strict";
 
-module.exports = class FoodSelect {
+module.exports = class FoodSelectDonot {
 
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      food: {
+      question: {
         message_to_confirm: {
           type: "template",
           altText: "他にも気になることある？",
@@ -53,7 +53,7 @@ module.exports = class FoodSelect {
   }
 
   async finish(bot, event, context) {
-    let intent_name = context.confirmed.another_q.data;
+    let intent_name = context.confirmed.question.data;
     console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name

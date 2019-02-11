@@ -5,10 +5,10 @@ module.exports = class FoodSelectBasic {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      foodbasic: {
+      question: {
         message_to_confirm: {
           type: "template",
-          altText: "他にも気になることある？",
+          altText: "気になることある？",
           template: {
             type: "buttons",
             text: "ご飯の基本は、こんなことがあるよ。何を知りたい？",
@@ -53,7 +53,7 @@ module.exports = class FoodSelectBasic {
   }
 
   async finish(bot, event, context) {
-    let intent_name = context.confirmed.foodbasic.data;
+    let intent_name = context.confirmed.question.data;
     console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name
