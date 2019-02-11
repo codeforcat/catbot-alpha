@@ -16,7 +16,7 @@ module.exports = class ToiletQuizDo {
             text: "こんなことないですか？",
             actions: [{
                 type: "postback",
-                label: "①おしっこやウンチをしたあと、砂をかけずに急いで出る",
+                label: "①トイレの後、砂をかけずに急いで出る",
                 displayText: "①おしっこやウンチをしたあと、砂をかけずに急いで出る",
                 data: "1"
               },
