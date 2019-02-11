@@ -14,14 +14,14 @@ module.exports = class FoodSelectWater {
             text: "水のあげ方は、こんなことがあるよ。何を知りたい？",
             actions: [{
                 type: "postback",
-                label: "何をあげればいいの？",
-                displayText: "何をあげればいいの？",
+                label: "水の種類？",
+                displayText: "水の種類？",
                 data: "food_answer_water"
               },
               {
                 type: "postback",
-                label: "いつあげればいいの",
-                displayText: "いつあげればいいの",
+                label: "置き場所？",
+                displayText: "置き場所？",
                 data: "food_answer_wherewater"
               }
             ]
