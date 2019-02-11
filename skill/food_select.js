@@ -29,12 +29,13 @@ module.exports = class FoodSelect {
                 label: "水のあげ方は？",
                 displayText: "水のあげ方は？",
                 data: "food_quiz_noteat"
+                // data: "food_select_basic"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select_water", "food_select_donot", "food_select_basic"].includes(value.data)){
+          if (["food_select_water", "food_select_donot", "food_select_basic","food_quiz_noteat"].includes(value.data)){
             return value;
           }
           throw new Error();
