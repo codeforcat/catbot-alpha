@@ -1,10 +1,10 @@
 'use strict';
 // 一問一答形式
-module.exports = class FoodQuizNoEatOK {
+module.exports = class FoodAnswerLeave {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "ピンポン！正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。"
+      text: "ドライなら置きっぱなしでも大丈夫だけど、酸化する前に、交換してね。目安は6時間くらいかな。"
     });
   }
 
@@ -38,7 +38,7 @@ module.exports = class FoodQuizNoEatOK {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["food_mame_water","food_mame_milk"];
+    let intents = ["food_quiz_noteat",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({

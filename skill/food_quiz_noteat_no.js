@@ -38,7 +38,7 @@ module.exports = class FoodQuizNoEatNo {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["food_mame_water"];
+    let intents = ["food_mame_water","food_mame_milk",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
@@ -46,8 +46,15 @@ module.exports = class FoodQuizNoEatNo {
         text: "どんなことが聞きたい"
       });
     }
-    await bot.switch_skill({
-      name: intent_name
-    });
+    if (intent_name == "") {
+      await bot.reply({
+        type: "text",
+        text: "また来てね！"
+      });
+    }else{
+      await bot.switch_skill({
+        name: intent_name
+      });
+    }
   }
 };
