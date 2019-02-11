@@ -56,7 +56,8 @@ module.exports = class FoodQuizNoEat {
             }
             bot.queue({
               type: "text",
-              text: answer
+              displayText: answer
+              // text: answer
             });
           }
         }
