@@ -77,9 +77,9 @@ module.exports = class FoodQuizNoEat {
     await bot.switch_skill({
       name: "food_mame_water",
     });
-    // await bot.reply({
-    //   type: "text",
-    //   text: "どんなことが聞きたい111111"
-    // });
+    await bot.reply({
+      type: "text",
+      text: "どんなことが聞きたい111111"
+    });
   }
 };
