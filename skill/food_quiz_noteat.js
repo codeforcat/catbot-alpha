@@ -82,7 +82,7 @@ module.exports = class FoodQuizNoEat {
     });
     await bot.reply({
       type: "text",
-      text: "どんなことが聞きたい？"
+      text: "どんなことが聞きたい111111"
     });
   }
 };

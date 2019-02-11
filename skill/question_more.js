@@ -40,7 +40,7 @@ module.exports = class QuestionMore {
     if (context.confirmed.more_quiz.data == "はい") {
       await bot.reply({
         type: "text",
-        text: "どんなことが聞きたい？"
+        text: "どんなことが聞きたい2222222"
       });
     }
     await bot.switch_skill({
