@@ -80,5 +80,9 @@ module.exports = class FoodQuizNoEat {
     await bot.switch_skill({
       name: "question_more"
     });
+    await bot.reply({
+      type: "text",
+      text: "どんなことが聞きたい？"
+    });
   }
 };
