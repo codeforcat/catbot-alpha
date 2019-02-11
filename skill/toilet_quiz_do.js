@@ -65,7 +65,7 @@ module.exports = class ToiletQuizDo {
   async finish(bot, event, context) {
     let intent_name = "food_quiz_noteat_no";
 
-    if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2"{
+    if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2"){
       intent_name = "food_quiz_noteat_ok";
     }
     await bot.switch_skill({
