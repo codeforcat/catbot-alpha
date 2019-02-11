@@ -16,21 +16,25 @@ module.exports = class CatbotQuestion {
             actions: [{
                 type: "postback",
                 label: "①4時間",
+                displayText: "①4時間",
                 data: "1"
               },
               {
                 type: "postback",
                 label: "②8時間",
+                displayText: "②8時間",
                 data: "2"
               },
               {
                 type: "postback",
                 label: "③12時間",
+                displayText: "③12時間",
                 data: "3"
               },
               {
                 type: "postback",
                 label: "④16時間",
+                displayText: "④16時間",
                 data: "4"
               }
             ]
