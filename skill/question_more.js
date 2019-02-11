@@ -6,7 +6,7 @@ module.exports = class QuestionMore {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      another_q: {
+      more_quiz: {
         message_to_confirm: {
           type: "template",
           altText: "もっと質問あるニャ？",
@@ -37,7 +37,7 @@ module.exports = class QuestionMore {
     console.log(context.confirmed);
     let intents = ["food_mame_water"];
     let intent_name = intents[0];
-    if (context.confirmed.another_q.data == "はい") {
+    if (context.confirmed.more_quiz.data == "はい") {
       await bot.reply({
         type: "text",
         text: "どんなことが聞きたい？"
