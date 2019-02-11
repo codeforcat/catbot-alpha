@@ -51,12 +51,12 @@ module.exports = class FoodQuizNoEat {
             });
           } else {
             let answer = `選択肢${value.data}だね。\n`;
-            console.log(answer);
             if(value.data == "1" || value.data == "2" || value.data == "3"){
               answer += "ピンポン！正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
             }else{
               answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
             }
+            console.log(answer);
             bot.queue({
               type: "text",
               displayText: answer
