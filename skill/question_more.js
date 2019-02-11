@@ -16,11 +16,13 @@ module.exports = class QuestionMore {
             actions: [{
                 type: "postback",
                 label: "はい",
+                displayText: "はい",
                 data: "はい"
               },
               {
                 type: "postback",
                 label: "いいえ",
+                displayText: "いいえ",
                 data: "いいえ"
               }
             ]
