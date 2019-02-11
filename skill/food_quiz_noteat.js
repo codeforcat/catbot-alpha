@@ -46,7 +46,7 @@ module.exports = class FoodQuizNoEat {
           if (error){
             bot.change_message_to_confirm("quiz", {
               type: "text",
-              text: "選択肢を入れてほしいニャ。",
+              text: "選択肢を入れてほしいニャ。"
               // displayText: "選択肢を入れてほしいニャ。"
             });
           } else {
@@ -57,10 +57,10 @@ module.exports = class FoodQuizNoEat {
               answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
             }
             console.log(answer);
-            await bot.reply({
+            bot.queue({
               type: "text",
               // displayText: answer
-              text: "answer"
+              text: answer
             });
           }
         }
