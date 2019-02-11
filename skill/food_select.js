@@ -28,7 +28,7 @@ module.exports = class FoodSelect {
                 type: "postback",
                 label: "水のあげ方は？",
                 displayText: "水のあげ方は？",
-                data: "food_select_water"
+                data: "food_quiz_noteat"
               }
             ]
           }
