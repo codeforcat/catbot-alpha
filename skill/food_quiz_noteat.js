@@ -60,7 +60,7 @@ module.exports = class FoodQuizNoEat {
             await bot.queue({
               type: "text",
               // displayText: answer
-              text: answer
+              text: "answer"
             });
           }
         }
