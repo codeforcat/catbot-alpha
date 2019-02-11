@@ -27,7 +27,7 @@ module.exports = class Welcome {
                   {
                     type: "postback",
                     label: "どうしよう？",
-                    data: "food_select"
+                    data: "food_quiz_noteat"
                   }
                 ]
               },
