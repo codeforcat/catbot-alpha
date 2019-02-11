@@ -1,10 +1,10 @@
 'use strict';
 // 一問一答形式
-module.exports = class FoodAnswerDry {
-  async begin(bot, event, context) {
+module.exports = class FoodAnswerSnack {
+  async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "ネコの年齢や体調に合ったドライを選んでね。"
+      text: "おやつをあげてもいいけど、あげすぎに注意。ご飯食べなくなるから。"
     });
   }
 
@@ -39,7 +39,7 @@ module.exports = class FoodAnswerDry {
   async finish(bot, event, context) {
     console.log(context.confirmed);
     let intents = ["food_mame_water","food_mame_milk","food_quiz_noteat","",,"","","",""];
-    let intent_name = intents[Math.floor(Math.random() * intents.length)];
+    let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
         type: "text",

@@ -38,7 +38,7 @@ module.exports = class FoodAnswerCan {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["food_mame_water","food_mame_milk",""];
+    let intents = ["food_mame_water","food_mame_milk","food_quiz_noteat","",,"","","",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({

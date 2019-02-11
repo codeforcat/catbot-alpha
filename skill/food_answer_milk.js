@@ -1,10 +1,10 @@
 'use strict';
 // 一問一答形式
-module.exports = class FoodAnswerDry {
-  async begin(bot, event, context) {
+module.exports = class FoodAnswerMilk {
+  async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "ネコの年齢や体調に合ったドライを選んでね。"
+      text: "牛乳はダメ。ネコは乳糖を分解できないので、ネコ用のミルクにしてね。"
     });
   }
 
@@ -38,8 +38,8 @@ module.exports = class FoodAnswerDry {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["food_mame_water","food_mame_milk","food_quiz_noteat","",,"","","",""];
-    let intent_name = intents[Math.floor(Math.random() * intents.length)];
+    let intents = ["food_mame_water","food_quiz_noteat","",,"","","",""];
+    let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
         type: "text",
