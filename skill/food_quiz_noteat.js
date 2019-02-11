@@ -59,7 +59,6 @@ module.exports = class FoodQuizNoEat {
             console.log(answer);
             bot.reply({
               type: "text",
-              // displayText: answer
               text: answer
             });
           }
