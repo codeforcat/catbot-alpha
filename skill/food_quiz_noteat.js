@@ -61,6 +61,10 @@ module.exports = class FoodQuizNoEat {
                 type: "text",
                 text: answer
             });
+            bot.switch_skill({
+              name: "food_mame_water",
+            });
+
           }
         }
       }
@@ -73,10 +77,7 @@ module.exports = class FoodQuizNoEat {
     //   type: "text",
     //   text: "あなたの留守中や夜間などお掃除できないことがありますよね。そんなときでも、清潔なトイレを利用できるように、複数設置してあげてください。"
     // });
-    await bot.init();
-    await bot.switch_skill({
-      name: "food_mame_water",
-    });
+    // await bot.init();
     await bot.reply({
       type: "text",
       text: "どんなことが聞きたい111111"
