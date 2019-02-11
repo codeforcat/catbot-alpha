@@ -63,10 +63,10 @@ module.exports = class ToiletQuizDo {
 
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
-    let intent_name = "food_quiz_noteat_no";
+    let intent_name = "toilet_quiz_do_size";
 
     if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2"){
-      intent_name = "food_quiz_noteat_ok";
+      intent_name = "toilet_quiz_do_sand";
     }
     await bot.switch_skill({
       name: intent_name,
