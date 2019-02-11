@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = class FoodSelect {
+module.exports = class FoodSelectWater {
 
   constructor() {
     this.clear_context_on_finish = true;
@@ -8,33 +8,27 @@ module.exports = class FoodSelect {
       question: {
         message_to_confirm: {
           type: "template",
-          altText: "他にも気になることある？",
+          altText: "気になることある？",
           template: {
             type: "buttons",
-            text: "ご飯の基本は、こんなことがあるよ。何を知りたい？",
+            text: "水のあげ方は、こんなことがあるよ。何を知りたい？",
             actions: [{
                 type: "postback",
-                label: "ご飯の基本",
-                displayText: "ご飯の基本",
-                data: "food_select_basic"
+                label: "何をあげればいいの？",
+                displayText: "何をあげればいいの？",
+                data: "food_answer_water"
               },
               {
                 type: "postback",
-                label: "いろんな種類があるけど？",
-                displayText: "いろんな種類があるけど？",
-                data: "food_select_donot"
-              },
-              {
-                type: "postback",
-                label: "水のあげ方は？",
-                displayText: "水のあげ方は？",
-                data: "food_select_water"
+                label: "いつあげればいいの",
+                displayText: "いつあげればいいの",
+                data: "food_answer_wherewater"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select_water", "food_select_donot", "food_select_basic"].includes(value.data)){
+          if (["food_answer_water", "food_answer_wherewater"].includes(value.data)){
             return value;
           }
           throw new Error();

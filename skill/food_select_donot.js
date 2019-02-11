@@ -8,33 +8,33 @@ module.exports = class FoodSelectDonot {
       question: {
         message_to_confirm: {
           type: "template",
-          altText: "他にも気になることある？",
+          altText: "気になることある？",
           template: {
             type: "buttons",
-            text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
+            text: "あげちゃいけないものには、こんなことがあるよ。何を知りたい？",
             actions: [{
                 type: "postback",
-                label: "ご飯の基本",
-                displayText: "ご飯の基本",
-                data: "food_select_basic"
+                label: "鰹節は？",
+                displayText: "鰹節は？",
+                data: "food_answer_katsuo"
               },
               {
                 type: "postback",
-                label: "いろんな種類があるけど？",
-                displayText: "いろんな種類があるけど？",
-                data: "food_select_donot"
+                label: "牛乳は？",
+                displayText: "牛乳は？",
+                data: "food_answer_milk"
               },
               {
                 type: "postback",
-                label: "水のあげ方は？",
-                displayText: "水のあげ方は？",
-                data: "food_select_water"
+                label: "他にあげちゃいけないものは？",
+                displayText: "他にあげちゃいけないものは？",
+                data: "food_answer_donteat"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select_water", "food_select_donot", "food_select_basic"].includes(value.data)){
+          if (["food_answer_katsuo", "food_answer_milk", "food_answer_donteat"].includes(value.data)){
             return value;
           }
           throw new Error();
