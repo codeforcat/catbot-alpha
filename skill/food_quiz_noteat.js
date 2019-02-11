@@ -1,6 +1,6 @@
 'use strict';
 // 質問に対して選択肢の質問で答える形式
-module.exports = class CatbotQuestion {
+module.exports = class FoodQuizNoEat {
 
   // コンストラクター。このスキルで必要とする、または指定することができるパラメータを設定します。
   constructor() {
@@ -12,37 +12,31 @@ module.exports = class CatbotQuestion {
           altText: "ここでクイズです",
           template: {
             type: "buttons",
-            text: "ここで、クイズです。ネコの平均睡眠時間はどれくらいだと思う？",
+            text: "ここで、クイズです。このなかで、ネコに食べさせたらダメなものは？",
             actions: [{
                 type: "postback",
-                label: "①4時間",
-                displayText: "①4時間",
+                label: "①玉ねぎ",
+                displayText: "①玉ねぎ",
                 data: "1"
               },
               {
                 type: "postback",
-                label: "②8時間",
-                displayText: "②8時間",
+                label: "②チョコレート",
+                displayText: "②チョコレート？",
                 data: "2"
               },
               {
                 type: "postback",
-                label: "③12時間",
-                displayText: "③12時間",
+                label: "③イカ",
+                displayText: "③イカ",
                 data: "3"
-              },
-              {
-                type: "postback",
-                label: "④16時間",
-                displayText: "④16時間",
-                data: "4"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
           console.log("value: " + value.data);
-          if (["1", "2", "3", "4"].includes(value.data)){
+          if (["1", "2", "3"].includes(value.data)){
             return value;
           }
           throw new Error();
@@ -55,10 +49,10 @@ module.exports = class CatbotQuestion {
             });
           } else {
             let answer = `選択肢${value.data}だね。\n`;
-            if(value.data == "4"){
-              answer += "ピンポン！正解です。\nネコは狩りのとき以外寝ていた野生時代の習性の名残で、一日16時間くらい寝るよ。でも、そのうちの12時間くらいは、眠りの浅いうたた寝状態だぞ。";
+            if(value.data == "1",value.data == "2",value.data == "3"){
+              answer += "ピンポン！正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
             }else{
-              answer += "ブッブー！不正解です。\nネコは狩りのとき以外寝ていた野生時代の習性の名残で、一日16時間くらい寝るよ。でも、そのうちの12時間くらいは、眠りの浅いうたた寝状態だぞ。";
+              answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
             }
             bot.queue({
               type: "text",
@@ -73,7 +67,7 @@ module.exports = class CatbotQuestion {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     await bot.switch_skill({
-      name: "catbot-question-more"
+      name: "question_more"
     });
   }
 };
