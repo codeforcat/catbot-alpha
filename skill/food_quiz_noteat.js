@@ -59,7 +59,7 @@ module.exports = class FoodQuizNoEat {
             console.log(answer);
             bot.queue({
                 type: "text",
-                text: "ありがとうございます。"
+                text: answer
             });
             // bot.queue({
             //   type: "text",
