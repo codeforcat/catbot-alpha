@@ -61,10 +61,6 @@ module.exports = class FoodQuizNoEat {
                 type: "text",
                 text: answer
             });
-            // bot.queue({
-            //   type: "text",
-            //   text: answer
-            // });
           }
         }
       }
@@ -79,7 +75,7 @@ module.exports = class FoodQuizNoEat {
     // });
     await bot.init();
     await bot.switch_skill({
-      name: "question_more"
+      name: "food_mame_water",
     });
     await bot.reply({
       type: "text",
