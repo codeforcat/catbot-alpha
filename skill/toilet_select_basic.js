@@ -4,7 +4,7 @@ module.exports = class ToiletSelectBasic {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      toiletbasic: {
+      toilet_basic: {
         message_to_confirm: {
           type: "template",
           altText: "トイレの基本は、こんなことがあるよ。何を知りたい？",
@@ -53,7 +53,7 @@ module.exports = class ToiletSelectBasic {
   }
 
   async finish(bot, event, context) {
-    let intent_name = context.confirmed.toiletbasic.data;
+    let intent_name = context.confirmed.toilet_basic.data;
     await bot.switch_skill({
       name: intent_name
     });
