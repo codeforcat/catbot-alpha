@@ -71,7 +71,7 @@ module.exports = class FoodQuizNoEat {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     await bot.switch_skill({
-      name: "food_quiz_noteat_ok",
+      name: "food_mame_water",
     });
     // await bot.reply({
     //   type: "text",
