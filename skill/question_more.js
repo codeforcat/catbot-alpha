@@ -36,7 +36,7 @@ module.exports = class QuestionMore {
   async finish(bot, event, context) {
     console.log(context.confirmed);
     let intents = ["food_mame_water"];
-    let intent_name = intents[Math.floor(intents.length * Math.random())];
+    let intent_name = intents[0];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
         type: "text",
