@@ -28,8 +28,8 @@ module.exports = class FoodSelect {
                 type: "postback",
                 label: "水のあげ方は？",
                 displayText: "水のあげ方は？",
-                data: "food_quiz_noteat"
-                // data: "food_select_basic"
+                // data: "food_quiz_noteat"
+                data: "food_select_basic"
               }
             ]
           }
