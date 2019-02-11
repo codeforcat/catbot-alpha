@@ -57,10 +57,10 @@ module.exports = class FoodQuizNoEat {
               answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
             }
             console.log(answer);
-            bot.queue({
-                type: "text",
-                text: "ありがとうございます。"
-            });
+            // bot.queue({
+            //     type: "text",
+            //     text: "ありがとうございます。"
+            // });
             // bot.queue({
             //   type: "text",
             //   text: answer
@@ -73,6 +73,10 @@ module.exports = class FoodQuizNoEat {
 
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
+    await bot.queue({
+      type: "text",
+      text: "あなたの留守中や夜間などお掃除できないことがありますよね。そんなときでも、清潔なトイレを利用できるように、複数設置してあげてください。"
+    });
     await bot.switch_skill({
       name: "question_more"
     });
