@@ -2,7 +2,12 @@
 // 質問に対して選択肢の質問で答える形式
 module.exports = class QuestionMore {
 
-  // コンストラクター。このスキルで必要とする、または指定することができるパラメータを設定します。
+  async begin(bot, event, context){
+    await bot.queue({
+      type: "text",
+      text: "ネコの年齢や体調に合ったドライを選んでね。"
+    });
+  }
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
