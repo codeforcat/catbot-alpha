@@ -15,8 +15,8 @@ module.exports = class ToiletSelect {
                 type: "postback",
                 label: "トイレの基本",
                 displayText: "トイレの基本",
-                // data: "toilet_select_basic"
-                data: "toilet_quiz_do"
+                data: "toilet_select_basic"
+                // data: "toilet_quiz_do"
               },
               {
                 type: "postback",
