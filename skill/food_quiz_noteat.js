@@ -37,7 +37,7 @@ module.exports = class FoodQuizNoEat {
         },
         parser: async (value, bot, event, context) => {
           console.log("value: " + value.data);
-          if (["1", "2", "3"].includes(value.data)){
+          if (["1", "2", "3", "4"].includes(value.data)){
             return value;
           }
           throw new Error();
@@ -61,16 +61,9 @@ module.exports = class FoodQuizNoEat {
 
     if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2" || context.confirmed.quiz.data == "3"){
       intent_name = "food_quiz_noteat_ok";
-      // answer += "ピンポン！正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
-    }else{
-      // answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
     }
     await bot.switch_skill({
       name: intent_name,
     });
-    // await bot.reply({
-    //   type: "text",
-    //   text: "どんなことが聞きたい111111"
-    // });
   }
 };

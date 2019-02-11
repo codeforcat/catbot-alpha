@@ -38,11 +38,12 @@ module.exports = class FoodQuizNoEatNo {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intent_name = "food_quiz_noteat";
-    if (context.confirmed.another_q.data == "はい") {
+    let intents = ["food_mame_water"];
+    let intent_name = intents[Math.floor(Math.random()*intents.length)];
+    if (context.confirmed.more_quiz.data == "はい") {
       await bot.reply({
         type: "text",
-        text: "どんなことが聞きたい？"
+        text: "どんなことが聞きたい"
       });
     }
     await bot.switch_skill({
