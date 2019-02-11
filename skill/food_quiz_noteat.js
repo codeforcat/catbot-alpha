@@ -78,7 +78,8 @@ module.exports = class FoodQuizNoEat {
     //   text: "あなたの留守中や夜間などお掃除できないことがありますよね。そんなときでも、清潔なトイレを利用できるように、複数設置してあげてください。"
     // });
     await bot.switch_skill({
-      name: "question_more"
+      name: "question_more",
+      parameters: {more_quiz:"はい"}
     });
     await bot.reply({
       type: "text",
