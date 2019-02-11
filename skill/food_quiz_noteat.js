@@ -1,5 +1,6 @@
 'use strict';
-// 質問に対して選択肢の質問で答える形式
+
+
 module.exports = class FoodQuizNoEat {
 
   // コンストラクター。このスキルで必要とする、または指定することができるパラメータを設定します。
@@ -47,21 +48,7 @@ module.exports = class FoodQuizNoEat {
             bot.change_message_to_confirm("quiz", {
               type: "text",
               text: "選択肢を入れてほしいニャ。"
-              // displayText: "選択肢を入れてほしいニャ。"
             });
-          } else {
-            let answer = `選択肢${value.data}だね。\n`;
-            if(value.data == "1" || value.data == "2" || value.data == "3"){
-              answer += "ピンポン！正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
-            }else{
-              answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
-            }
-            console.log(answer);
-            // await bot.queue({
-            //     type: "text",
-            //     text: answer
-            // });
-
           }
         }
       }
@@ -70,8 +57,16 @@ module.exports = class FoodQuizNoEat {
 
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
+    let intent_name = "food_quiz_noteat_no";
+
+    if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2" || context.confirmed.quiz.data == "3"){
+      intent_name = "food_quiz_noteat_ok";
+      // answer += "ピンポン！正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
+    }else{
+      // answer += "ブッブー！不正解です。\n玉ねぎ、ネギ、にんにく、チョコレート、イカなど、人間の食べ物は塩気が多いのでだめです。あと、生ものも避けようね。";
+    }
     await bot.switch_skill({
-      name: "food_quiz_noteat_ok",
+      name: intent_name,
     });
     // await bot.reply({
     //   type: "text",
