@@ -58,7 +58,7 @@ module.exports = class FoodSelect {
     console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name,
-      parameters: {}
+      parameters: {more_quiz:"はい"}
     });
   }
 };
