@@ -38,7 +38,7 @@ module.exports = class ToiletQuizDoSand {
   // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["toilet_mame_poohigh"];
+    let intents = ["toilet_mame_poohigh","","","","","","",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
