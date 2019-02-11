@@ -58,9 +58,13 @@ module.exports = class FoodQuizNoEat {
             }
             console.log(answer);
             bot.queue({
-              type: "text",
-              text: answer
+                type: "text",
+                text: "ありがとうございます。"
             });
+            // bot.queue({
+            //   type: "text",
+            //   text: answer
+            // });
           }
         }
       },
