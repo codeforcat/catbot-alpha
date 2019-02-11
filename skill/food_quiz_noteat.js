@@ -42,11 +42,12 @@ module.exports = class FoodQuizNoEat {
           throw new Error();
         },
         reaction: async (error, value, bot, event, context) => {
+          console.log("FoodQuizNoEat reaction");
           if (error){
             bot.change_message_to_confirm("quiz", {
               type: "text",
-              // text: "選択肢を入れてほしいニャ。",
-              displayText: "選択肢を入れてほしいニャ。"
+              text: "選択肢を入れてほしいニャ。",
+              // displayText: "選択肢を入れてほしいニャ。"
             });
           } else {
             let answer = `選択肢${value.data}だね。\n`;
