@@ -43,7 +43,7 @@ module.exports = class ToiletQuizDo {
         },
         parser: async (value, bot, event, context) => {
           console.log("value: " + value.data);
-          if (["1", "2", "3", "4", "5"].includes(value.data)){
+          if (["1", "2", "3", "4"].includes(value.data)){
             return value;
           }
           throw new Error();
@@ -65,7 +65,7 @@ module.exports = class ToiletQuizDo {
   async finish(bot, event, context) {
     let intent_name = "food_quiz_noteat_no";
 
-    if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2" || context.confirmed.quiz.data == "3"){
+    if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2"{
       intent_name = "food_quiz_noteat_ok";
     }
     await bot.switch_skill({
