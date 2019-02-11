@@ -13,28 +13,28 @@ module.exports = class ToiletQuizDo {
           altText: "こんなことないですか？",
           template: {
             type: "buttons",
-            text: "こんなことないですか？",
+            text: "トイレの時こんなことないですか？",
             actions: [{
                 type: "postback",
-                label: "①トイレの後、砂をかけずに急いで出る",
+                label: "①砂をかけずに急いで出る",
                 displayText: "①おしっこやウンチをしたあと、砂をかけずに急いで出る",
                 data: "1"
               },
               {
                 type: "postback",
-                label: "②トイレのヘリや壁をカリカリかく",
+                label: "②ヘリや壁をカリカリかく",
                 displayText: "②トイレのヘリや壁をカリカリかく",
                 data: "2"
               },
               {
                 type: "postback",
-                label: "③空中をかくような仕草をする",
+                label: "③空中をかく",
                 displayText: "③空中をかくような仕草をする",
                 data: "3"
               },
               {
                 type: "postback",
-                label: "④トイレのヘリに足をかけて排泄する",
+                label: "④ヘリに足をかけて排泄",
                 displayText: "④トイレのヘリに足をかけて排泄する",
                 data: "4"
               }
