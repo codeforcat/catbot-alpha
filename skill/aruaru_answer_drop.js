@@ -1,11 +1,10 @@
 'use strict';
 
-module.exports = class AruaruAnswerGrooming {
+module.exports = class AruaruAnswerDrop {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "落ち着くためにしてるんだよ。\n" +
-      "ネコの祖先が体温調節のために全身を舐めていたことが習性として残っていると言われてるんだ。毛づくろいしなくなったら、病気やケガをしてることがあるから、注意してあげてね。"
+      text: "なぜ、机の上のものを落とすか、それは楽しいからです。落とすものによって、その様子は様々、ネコは獲物を想起させるものが好きなので、落下の動きが楽しいのです。また、モノを落とすと飼い主さんが来たり、声を出したりするので、その反応も楽しんでいます。"
     });
   }
 
@@ -22,15 +21,15 @@ module.exports = class AruaruAnswerGrooming {
             actions: [
               {
                 type: "postback",
-                label: "母ネコが子ネコにするのは？",
-                displayText: "母ネコが子ネコにするのは？",
-                data: "aruaru_answer_groomchild"
+                label: "対処法ある？",
+                displayText: "対処法ある？",
+                data: "aruaru_answer_copedrop"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["aruaru_answer_groomchild"].includes(value.data)){
+          if (["aruaru_answer_copedrop"].includes(value.data)){
             return value;
           }
           throw new Error();

@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = class AruaruAnswerGrooming {
+module.exports = class AruaruAnswerBite {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "落ち着くためにしてるんだよ。\n" +
-      "ネコの祖先が体温調節のために全身を舐めていたことが習性として残っていると言われてるんだ。毛づくろいしなくなったら、病気やケガをしてることがあるから、注意してあげてね。"
+      text: "頻繁な甘噛みはストレスのサインです。\n" +
+      "甘噛み本来は狩りの練習と考えられますが、ストレスによる攻撃の場合もありますので、頻繁に行われるときには注意してあげてね。"
     });
   }
 
@@ -22,15 +22,15 @@ module.exports = class AruaruAnswerGrooming {
             actions: [
               {
                 type: "postback",
-                label: "母ネコが子ネコにするのは？",
-                displayText: "母ネコが子ネコにするのは？",
-                data: "aruaru_answer_groomchild"
+                label: "対処法ある？",
+                displayText: "対処法ある？",
+                data: "aruaru_answer_approachbite"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["aruaru_answer_groomchild"].includes(value.data)){
+          if (["aruaru_answer_approachbite"].includes(value.data)){
             return value;
           }
           throw new Error();

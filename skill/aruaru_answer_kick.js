@@ -1,11 +1,10 @@
 'use strict';
 
-module.exports = class AruaruAnswerGrooming {
+module.exports = class AruaruAnswerKick {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "落ち着くためにしてるんだよ。\n" +
-      "ネコの祖先が体温調節のために全身を舐めていたことが習性として残っていると言われてるんだ。毛づくろいしなくなったら、病気やケガをしてることがあるから、注意してあげてね。"
+      text: "後ろ脚キックも狩りのトレーニングです。後ろ脚から繰り出される強烈なネコキックは、狩猟本能によるもの。獲物を仕留めたあと、相手を疲れさせることが目的なので、一度始まるとなかなか止まりません。"
     });
   }
 
@@ -22,15 +21,15 @@ module.exports = class AruaruAnswerGrooming {
             actions: [
               {
                 type: "postback",
-                label: "母ネコが子ネコにするのは？",
-                displayText: "母ネコが子ネコにするのは？",
-                data: "aruaru_answer_groomchild"
+                label: "機嫌が悪いときされる気がする？",
+                displayText: "機嫌が悪いときされる気がする？",
+                data: "aruaru_answer_kickmood"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["aruaru_answer_groomchild"].includes(value.data)){
+          if (["aruaru_answer_kickmood"].includes(value.data)){
             return value;
           }
           throw new Error();

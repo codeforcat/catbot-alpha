@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = class AruaruAnswerGrooming {
+module.exports = class AruaruAnswerBlink {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "落ち着くためにしてるんだよ。\n" +
-      "ネコの祖先が体温調節のために全身を舐めていたことが習性として残っていると言われてるんだ。毛づくろいしなくなったら、病気やケガをしてることがあるから、注意してあげてね。"
+      text: "ゆっくり瞬きは、好きのサイン。\n" +
+      "ネコが飼い主に対して瞬きするのは、心を許しているサインです。リラックスしているときは、瞬きのほかに、両目をギュッと閉じたりすることも。"
     });
   }
 
@@ -22,15 +22,15 @@ module.exports = class AruaruAnswerGrooming {
             actions: [
               {
                 type: "postback",
-                label: "母ネコが子ネコにするのは？",
-                displayText: "母ネコが子ネコにするのは？",
-                data: "aruaru_answer_groomchild"
+                label: "目を見開いて、じっと見つめてるときは？",
+                displayText: "目を見開いて、じっと見つめてるときは？",
+                data: "aruaru_answer_spreadeyes"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["aruaru_answer_groomchild"].includes(value.data)){
+          if (["aruaru_answer_spreadeyes"].includes(value.data)){
             return value;
           }
           throw new Error();
