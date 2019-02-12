@@ -8,7 +8,7 @@ module.exports = class AruaruAnswerCopedrop {
   async finish(bot, event, context){
     await bot.reply({
       type: "text",
-      text: "寝る前に、しっかり遊ばせることで、飼い主もネコもぐっすり眠れるでしょう。"
+      text: "ネコがモノを落とすことを防ぐのは無理なので、落とされたら困るものを置かないようにする、これしかありません。"
     });
   }
 };

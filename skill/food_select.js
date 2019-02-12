@@ -8,7 +8,7 @@ module.exports = class FoodSelect {
       question: {
         message_to_confirm: {
           type: "template",
-          altText: "他にも気になることある？",
+          altText: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
           template: {
             type: "buttons",
             text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
