@@ -25,8 +25,8 @@ module.exports = class AruaruSelect {
               },
               {
                 type: "postback",
-                label: "後ろ脚キック・夜の運動会・机のものを落とす",
-                displayText: "後ろ脚キック・夜の運動会・机のものを落とす",
+                label: "後ろ脚キック・夜の運動会・ものを落とす",
+                displayText: "後ろ脚キック・夜の運動会・ものを落とす",
                 data: "aruaru_select_kick"
               }
             ]
