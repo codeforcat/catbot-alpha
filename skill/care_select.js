@@ -19,8 +19,8 @@ module.exports = class CareSelect {
               },
               {
                 type: "postback",
-                label: "ブラッシング・シャンプー・歯磨き",
-                displayText: "ブラッシング・シャンプー・歯磨き",
+                label: "ブラシ・シャンプー・歯磨き",
+                displayText: "ブラシ・シャンプー・歯磨き",
                 data: "care_select_brushing"
               },
               {

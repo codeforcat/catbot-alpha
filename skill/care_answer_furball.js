@@ -8,7 +8,7 @@ module.exports = class CareAnswerFurball {
   async finish(bot, event, context){
     await bot.reply({
       type: "text",
-      text: "ネコマッサージに決まった手順はありません。気持ちのいいツボも力加減もネコそれぞれ。うっとり目を閉じていたら、うまくできている証拠です。そのうち、自分からおねだりするようになりますよ。"
+      text: "吐かせるのではなく、口に入らないようにすべきです。下毛の多いネコは先にコームで取り除いてから、ラバーブラシでちょっと固い毛を抜いてあげるのが基本。"
     });
   }
 };
