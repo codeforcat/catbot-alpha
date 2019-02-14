@@ -14,10 +14,10 @@ module.exports = class FoodQuizNoEatOK {
       another_q: {
         message_to_confirm: {
           type: "template",
-          altText: "もっと質問あるニャ？",
+          altText: "もっと質問あるにゃ？",
           template: {
-            type: "buttons",
-            text: "もっと質問あるニャ？",
+            type: "confirm",
+            text: "もっと質問あるにゃ？",
             actions: [{
                 type: "postback",
                 label: "はい",
