@@ -43,7 +43,7 @@ module.exports = class ToiletQuizDoSand {
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
         type: "text",
-        text: "どんなことが聞きたい"
+        text: "どんなことが聞きたい？"
       });
     }
     if (intent_name == "") {
