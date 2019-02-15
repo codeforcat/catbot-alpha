@@ -1,10 +1,10 @@
 "use strict";
 
-module.exports = class Welcome {
+module.exports = class RichmenuSelectTheme {
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      opening: {
+      theme: {
         message_to_confirm: {
           type: "template",
           altText: "何か気になることある？",
@@ -104,13 +104,28 @@ module.exports = class Welcome {
               }
             ]
           }
+        },
+        parser: async (value, bot, event, context) => {
+          if (["food_select", "toilet_select", "environment_select", "housesitting_select", "aruaru_select", "friendly_select", "care_select"].includes(value.data)){
+            return value;
+          }
+          throw new Error();
+        },
+        reaction: async (error, value, bot, event, context) => {
+          if (error){
+            await bot.reply({
+              type: "text",
+              text: "にゃ？\nもう一度言ってほしいにゃ。"
+            });
+            await bot.init();
+          }
         }
       }
     }
   }
 
   async finish(bot, event, context) {
-    let intent_name = context.confirmed.opening.data;
+    let intent_name = context.confirmed.theme.data;
     await bot.switch_skill({
       name: intent_name
     });
