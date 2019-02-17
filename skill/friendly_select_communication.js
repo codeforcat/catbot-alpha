@@ -20,7 +20,7 @@ module.exports = class FriendlySelectCommunication {
               },
               {
                 type: "postback",
-                label: "ネコとのコミュニケーション",
+                label: "コミュニケーション",
                 displayText: "ネコとのコミュニケーション",
                 data: "friendly_select_playcat"
               },

@@ -14,13 +14,13 @@ module.exports = class FriendlySelectPleasure {
             actions: [
               {
                 type: "postback",
-                label: "おもちゃ・追いかけっこ・かくれんぼ",
+                label: "おもちゃ追いかけ隠れんぼ",
                 displayText: "おもちゃ・追いかけっこ・かくれんぼ",
                 data: "friendly_select_goods"
               },
               {
                 type: "postback",
-                label: "マッサージ・ブラッシング・撫でる",
+                label: "マッサージブラシ撫で",
                 displayText: "マッサージ・ブラッシング・撫でる",
                 data: "friendly_select_massage"
               }

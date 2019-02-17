@@ -14,13 +14,13 @@ module.exports = class FriendlySelectDont {
             actions: [
               {
                 type: "postback",
-                label: "見つめる・追いかける・隠れ場所を暴く",
+                label: "見つめ追いかけ暴く",
                 displayText: "見つめる・追いかける・隠れ場所を暴く",
                 data: "friendly_select_gaze"
               },
               {
                 type: "postback",
-                label: "しつこく触られる・大声・大きな動作",
+                label: "触られ大声大きな動作",
                 displayText: "しつこく触られる・大声・大きな動作",
                 data: "friendly_select_touch"
               }

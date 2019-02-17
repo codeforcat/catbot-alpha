@@ -25,7 +25,7 @@ module.exports = class FriendlySelect {
               },
               {
                 type: "postback",
-                label: "ネコとのコミュニケーション",
+                label: "コミュニケーション",
                 displayText: "ネコとのコミュニケーション",
                 data: "friendly_select_communication"
               }

@@ -13,20 +13,20 @@ module.exports = class AruaruSelect {
             text: "どのネコあるあるが気になるかな？",
             actions: [{
                 type: "postback",
-                label: "毛づくろい・ふみふみ・スリスリ",
+                label: "毛づくろい・ふみスリ",
                 displayText: "毛づくろい・ふみふみ・スリスリ",
                 data: "aruaru_select_grooming"
                 // data: "aruaru_quiz_sign"
               },
               {
                 type: "postback",
-                label: "カカカッ・甘噛み・ゆっくり瞬き",
+                label: "カカカッ甘噛み瞬き",
                 displayText: "カカカッ・甘噛み・ゆっくり瞬き",
                 data: "aruaru_select_kakaka"
               },
               {
                 type: "postback",
-                label: "後ろ脚キック・夜の運動会・ものを落とす",
+                label: "後ろ脚運動会落とす",
                 displayText: "後ろ脚キック・夜の運動会・ものを落とす",
                 data: "aruaru_select_kick"
               }
