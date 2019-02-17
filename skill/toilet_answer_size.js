@@ -1,5 +1,5 @@
 'use strict';
-// 一問一答形式
+
 module.exports = class ToiletAnswerSize {
   async begin(bot, event, context){
     await bot.queue({
@@ -30,12 +30,26 @@ module.exports = class ToiletAnswerSize {
               }
             ]
           }
+        },
+        parser: async (value, bot, event, context) => {
+          if (["はい", "いいえ"].includes(value.data)){
+            return value;
+          }
+          throw new Error();
+        },
+        reaction: async (error, value, bot, event, context) => {
+          if (error){
+            await bot.reply({
+              type: "text",
+              text: "にゃ？\nもう一度言ってほしいにゃ。"
+            });
+            await bot.init();
+          }
         }
-      },
-    };
+      }
+    }
   }
 
-  // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
     let intents = ["toilet_mame_poohigh","toilet_quiz_do","","","","","",""];

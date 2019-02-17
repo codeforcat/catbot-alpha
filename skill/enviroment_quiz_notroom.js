@@ -1,9 +1,6 @@
 'use strict';
 
-
 module.exports = class EnviromentQuizLike {
-
-  // コンストラクター。このスキルで必要とする、または指定することができるパラメータを設定します。
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
@@ -82,12 +79,26 @@ module.exports = class EnviromentQuizLike {
               }
             ]
           }
+        },
+        parser: async (value, bot, event, context) => {
+          if (["はい", "いいえ"].includes(value.data)){
+            return value;
+          }
+          throw new Error();
+        },
+        reaction: async (error, value, bot, event, context) => {
+          if (error){
+            await bot.reply({
+              type: "text",
+              text: "にゃ？\nもう一度言ってほしいにゃ。"
+            });
+            await bot.init();
+          }
         }
-      },
-    };
+      }
+    }
   }
 
-  // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
     let intents = ["food_mame_water","food_mame_milk","food_quiz_noteat","","","","",""];

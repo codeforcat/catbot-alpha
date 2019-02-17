@@ -1,5 +1,5 @@
 'use strict';
-// 質問に対して選択肢の質問で答える形式
+
 module.exports = class QuestionMore {
 
   // async begin(bot, event, context){
@@ -32,12 +32,26 @@ module.exports = class QuestionMore {
               }
             ]
           }
+        },
+        parser: async (value, bot, event, context) => {
+          if (["はい", "いいえ"].includes(value.data)){
+            return value;
+          }
+          throw new Error();
+        },
+        reaction: async (error, value, bot, event, context) => {
+          if (error){
+            await bot.reply({
+              type: "text",
+              text: "にゃ？\nもう一度言ってほしいにゃ。"
+            });
+            await bot.init();
+          }
         }
       }
-    };
+    }
   }
 
-  // パラメーターが全部揃ったら実行する処理を記述します。
   async finish(bot, event, context) {
     console.log(context.confirmed);
     let intents = ["food_mame_water"];
