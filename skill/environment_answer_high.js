@@ -21,7 +21,7 @@ module.exports = class EnvironmentAnswerHigh {
             actions: [
               {
                 type: "postback",
-                label: "キャットタワー、どこに置いたらいい？",
+                label: "キャットタワーの設置",
                 displayText: "キャットタワー、どこに置いたらいい？",
                 data: "environment_answer_cattower"
               }
