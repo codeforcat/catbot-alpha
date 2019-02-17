@@ -15,8 +15,8 @@ module.exports = class EnvironmentSelect {
                 type: "postback",
                 label: "好きな場所",
                 displayText: "好きな場所",
-                data: "enviroment_quiz_notroom"
-                // data: "environment_select_like"
+                // data: "enviroment_quiz_notroom"
+                data: "environment_select_like"
               },
               {
                 type: "postback",
