@@ -12,8 +12,7 @@ module.exports = class RichmenuSelectTheme {
             type: "carousel",
             columns: [
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_food_thumbnail.jpg",
                 title: "ご飯どうする",
                 text: "食べさせちゃいけないものもあるよ",
                 actions: [
@@ -25,8 +24,7 @@ module.exports = class RichmenuSelectTheme {
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_toilet_thumbnail.jpg",
                 title: "トイレの用意",
                 text: "考えないといけないことがたくさん！",
                 actions: [
@@ -38,8 +36,7 @@ module.exports = class RichmenuSelectTheme {
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_environment_thumbnail.jpg",
                 title: "環境づくり",
                 text: "快適な場所を作ってほしいな",
                 actions: [
@@ -51,8 +48,7 @@ module.exports = class RichmenuSelectTheme {
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_housesitting_thumbnail.jpg",
                 title: "お留守番",
                 text: "いろんな注意点があるよ",
                 actions: [
@@ -64,8 +60,7 @@ module.exports = class RichmenuSelectTheme {
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_aruaru_thumbnail.jpg",
                 title: "ネコあるある",
                 text: "気になるしぐさや習慣があるよね",
                 actions: [
@@ -77,8 +72,7 @@ module.exports = class RichmenuSelectTheme {
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_friendly_thumbnail.jpg",
                 title: "仲良くなりたい",
                 text: "気持ちをわかってほしい！",
                 actions: [
@@ -90,8 +84,7 @@ module.exports = class RichmenuSelectTheme {
                 ]
               },
               {
-                thumbnailImageUrl: "https://code4cat.org/catbot/catbot-02_thumbnail.jpg",
-                imageBackgroundColor: "#FFFFFF",
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_care_thumbnail.jpg",
                 title: "大切にしたい",
                 text: "身体のケアを忘れないでね",
                 actions: [
