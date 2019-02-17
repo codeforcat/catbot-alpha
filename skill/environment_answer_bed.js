@@ -21,8 +21,8 @@ module.exports = class EnvironmentAnswerBed {
             actions: [
               {
                 type: "postback",
-                label: "どんな場所に置くのがいい？",
-                displayText: "どんな場所に置くのがいい？",
+                label: "どこに置くといい？",
+                displayText: "どこに置くといい？",
                 data: "environment_answer_wherebed"
               }
             ]
