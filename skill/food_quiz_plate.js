@@ -53,7 +53,7 @@ module.exports = class FoodQuizPlate {
   async finish(bot, event, context) {
     let intent_name = "food_quiz_plate_no";
 
-    if(context.confirmed.quiz.data == "1" || context.confirmed.quiz.data == "2"){
+    if(context.confirmed.quiz.data == "1"){
       intent_name = "food_quiz_plate_ok";
     }
     await bot.switch_skill({
