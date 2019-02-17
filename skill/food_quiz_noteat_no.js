@@ -18,14 +18,17 @@ module.exports = class FoodQuizNoEatNo {
           template: {
             type: "confirm",
             text: "もっと質問あるにゃ？",
-            actions: [{
+            actions: [
+              {
                 type: "postback",
                 label: "はい",
+                displayText: "はい",
                 data: "はい"
               },
               {
                 type: "postback",
                 label: "いいえ",
+                displayText: "いいえ",
                 data: "いいえ"
               }
             ]

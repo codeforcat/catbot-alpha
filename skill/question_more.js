@@ -18,7 +18,8 @@ module.exports = class QuestionMore {
           template: {
             type: "confirm",
             text: "もっと質問あるにゃ？",
-            actions: [{
+            actions: [
+              {
                 type: "postback",
                 label: "はい",
                 displayText: "はい",
