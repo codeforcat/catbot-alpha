@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = class FoodSelectDonot {
+module.exports = class FoodSelectDonteat {
 
   constructor() {
     this.clear_context_on_finish = true;
@@ -8,7 +8,7 @@ module.exports = class FoodSelectDonot {
       question: {
         message_to_confirm: {
           type: "template",
-          altText: "気になることある？",
+          altText: "あげちゃいけないものには、こんなことがあるよ。何を知りたい？",
           template: {
             type: "buttons",
             text: "あげちゃいけないものには、こんなことがあるよ。何を知りたい？",
@@ -26,7 +26,7 @@ module.exports = class FoodSelectDonot {
               },
               {
                 type: "postback",
-                label: "他にあげちゃいけないものは？",
+                label: "他には？",
                 displayText: "他にあげちゃいけないものは？",
                 data: "food_answer_donteat"
               }

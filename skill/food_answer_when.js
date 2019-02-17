@@ -22,8 +22,8 @@ module.exports = class FoodAnswerWhen {
             actions: [
               {
                 type: "postback",
-                label: "置きっぱなしでも大丈夫なの？",
-                displayText: "置きっぱなしでも大丈夫なの？",
+                label: "置きっぱなしで大丈夫？",
+                displayText: "置きっぱなしで大丈夫？",
                 data: "food_answer_leave"
               }
             ]

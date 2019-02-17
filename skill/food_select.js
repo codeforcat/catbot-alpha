@@ -22,7 +22,7 @@ module.exports = class FoodSelect {
                 type: "postback",
                 label: "いろんな種類があるけど？",
                 displayText: "いろんな種類があるけど？",
-                data: "food_select_donot"
+                data: "food_select_donteat"
               },
               {
                 type: "postback",
@@ -35,7 +35,7 @@ module.exports = class FoodSelect {
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select_water", "food_select_donot", "food_select_basic","food_quiz_noteat"].includes(value.data)){
+          if (["food_select_water", "food_select_donteat", "food_select_basic","food_quiz_noteat"].includes(value.data)){
             return value;
           }
           throw new Error();

@@ -22,7 +22,7 @@ module.exports = class FoodAnswerDry {
             actions: [
               {
                 type: "postback",
-                label: "ドライもいろいろあるけど？",
+                label: "ドライもいろいろ",
                 displayText: "ドライもいろいろあるけど？",
                 data: "food_answer_whichdry"
               },
