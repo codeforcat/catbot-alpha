@@ -15,8 +15,8 @@ module.exports = class AruaruSelect {
                 type: "postback",
                 label: "毛づくろい・ふみふみ・スリスリ",
                 displayText: "毛づくろい・ふみふみ・スリスリ",
-                // data: "aruaru_select_grooming"
-                data: "aruaru_quiz_sign"
+                data: "aruaru_select_grooming"
+                // data: "aruaru_quiz_sign"
               },
               {
                 type: "postback",
