@@ -52,17 +52,16 @@ module.exports = class EnviromentQuizLike {
               type: "text",
               text: "選択肢を入れてほしいニャ。"
             });
-          } else {
-            await bot.queue({
-              type: "text",
-              text: "全部正解だよ！\n①花・観葉植物\nゆり科、ネギ類など毒になる植物は数百種類もあるよ!\n②アロマオイル・サプリメント\nネコには刺激が強すぎるし、毒になることもあるよ！\n③タバコ\nもちろんダメだよ!\n④柑橘系のニオイ\n大嫌いだよ!"
-            });
           }
         }
       }
     }
   }
 
-  async finish(bot, event, context) {
-  }
-};
+    async finish(bot, event, context) {
+      await bot.reply({
+        type: "text",
+        text: "全部正解だよ！\n①花・観葉植物\nゆり科、ネギ類など毒になる植物は数百種類もあるよ!\n②アロマオイル・サプリメント\nネコには刺激が強すぎるし、毒になることもあるよ！\n③タバコ\nもちろんダメだよ!\n④柑橘系のニオイ\n大嫌いだよ!"
+      });
+    }
+  };

@@ -46,11 +46,6 @@ module.exports = class EnviromentQuizLike {
               type: "text",
               text: "選択肢を入れてほしいニャ。"
             });
-          } else {
-            await bot.queue({
-              type: "text",
-              text: "全部正解だよ！\nゴロゴロという鳴き声には、いろんな意味があるよ。大体は、ご機嫌なときのゴロゴロなんだけど、「ご飯ちょうだい」などの要求がらみのものやカラダの具合が悪いときにもゴロゴロするので、気をつけて見ておいてね。"
-            });
           }
         }
       }
@@ -58,5 +53,9 @@ module.exports = class EnviromentQuizLike {
   }
 
   async finish(bot, event, context) {
+    await bot.reply({
+      type: "text",
+      text: "全部正解だよ！\nゴロゴロという鳴き声には、いろんな意味があるよ。大体は、ご機嫌なときのゴロゴロなんだけど、「ご飯ちょうだい」などの要求がらみのものやカラダの具合が悪いときにもゴロゴロするので、気をつけて見ておいてね。"
+    });
   }
 };
