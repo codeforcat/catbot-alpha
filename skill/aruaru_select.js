@@ -34,7 +34,7 @@ module.exports = class AruaruSelect {
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["aruaru_select_grooming", "aruaru_select_kakaka", "aruaru_select_kick"].includes(value.data)){
+          if (["aruaru_select_grooming", "aruaru_select_kakaka", "aruaru_select_kick","aruaru_quiz_sign"].includes(value.data)){
             return value;
           }
           throw new Error();
