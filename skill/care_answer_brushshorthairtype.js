@@ -4,7 +4,7 @@ module.exports = class CareAnswerBrushshorthairtype {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "関節痛かもしれないので、注意してあげて。"
+      text: "短毛種ならラバーブラシを気に入る子が多いようですが、ブラッシングを嫌がるようなら道具を変えてみましょう。"
     });
   }
 
