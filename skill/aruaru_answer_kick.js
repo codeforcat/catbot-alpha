@@ -21,7 +21,7 @@ module.exports = class AruaruAnswerKick {
             actions: [
               {
                 type: "postback",
-                label: "機嫌が悪いときされる気がする？",
+                label: "機嫌が悪いの？",
                 displayText: "機嫌が悪いときされる気がする？",
                 data: "aruaru_answer_kickmood"
               }

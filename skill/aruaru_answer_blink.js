@@ -22,7 +22,7 @@ module.exports = class AruaruAnswerBlink {
             actions: [
               {
                 type: "postback",
-                label: "目を見開いて、じっと見つめてるときは？",
+                label: "目を見開いて見つめてる",
                 displayText: "目を見開いて、じっと見つめてるときは？",
                 data: "aruaru_answer_spreadeyes"
               }
