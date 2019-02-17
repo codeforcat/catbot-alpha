@@ -23,13 +23,13 @@ module.exports = class HousesittingAnswerOuthome {
                 type: "postback",
                 label: "注意するところは？",
                 displayText: "注意するところは？",
-                data: "environment_answer_outhomwcaution"
+                data: "housesitting_answer_outhomecaution"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["environment_answer_outhomwcaution"].includes(value.data)){
+          if (["housesitting_answer_outhomecaution"].includes(value.data)){
             return value;
           }
           throw new Error();
