@@ -55,7 +55,7 @@ module.exports = class HousesittingAnswerOuthomecaution {
 
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["housesitting_mame_room","","","","",""];
+    let intents = ["housesitting_mame_room","housesitting_mame_season","","","",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
