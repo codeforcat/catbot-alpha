@@ -21,7 +21,7 @@ module.exports = class FriendlyAnswerPose {
             actions: [
               {
                 type: "postback",
-                label: "こんな歩き方をしていたら注意",
+                label: "こんな歩き方は注意",
                 displayText: "こんな歩き方をしていたら注意",
                 data: "friendly_answer_walkstylecaution"
               }
