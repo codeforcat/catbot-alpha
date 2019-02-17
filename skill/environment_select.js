@@ -15,7 +15,7 @@ module.exports = class EnvironmentSelect {
                 type: "postback",
                 label: "好きな場所",
                 displayText: "好きな場所",
-                data: "enviroment_quiz_like"
+                data: "enviroment_quiz_notroom"
                 // data: "environment_select_like"
               },
               {
@@ -34,7 +34,7 @@ module.exports = class EnvironmentSelect {
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["environment_select_like", "environment_answer_bed", "environment_answer_uncomfortable","enviroment_quiz_like"].includes(value.data)){
+          if (["environment_select_like", "environment_answer_bed", "environment_answer_uncomfortable","enviroment_quiz_notroom"].includes(value.data)){
             return value;
           }
           throw new Error();
