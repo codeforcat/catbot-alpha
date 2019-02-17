@@ -8,10 +8,5 @@ module.exports = class FoodQuizNoEatOK {
     });
   }
   async finish(bot, event, context) {
-    console.log(context.confirmed);
-    await bot.reply({
-      type: "text",
-      text: "また来てね！"
-    });
   }
 };
