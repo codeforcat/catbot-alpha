@@ -14,6 +14,7 @@ module.exports = class RichmenuTeacherSecret {
       "environment_mame_sleep",
       "environment_mame_catforwarding",
       "housesitting_mame_room",
+      "housesitting_mame_season",
       "aruaru_mame_grooming",
       "aruaru_mame_bite",
       "aruaru_mame_play",

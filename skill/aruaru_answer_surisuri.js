@@ -24,19 +24,19 @@ module.exports = class AruaruAnswerSurisuri {
                 type: "postback",
                 label: "家具にも人にもするのは？",
                 displayText: "家具にも人にもするのは？",
-                data: "housesitting_answer_groomother"
+                data: "aruaru_answer_groomother"
               },
               {
                 type: "postback",
                 label: "他のネコとするのは？",
                 displayText: "他のネコとするのは？",
-                data: "housesitting_answer_groomothercat"
+                data: "aruaru_answer_groomothercat"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["housesitting_answer_groomother", "housesitting_answer_groomothercat"].includes(value.data)){
+          if (["aruaru_answer_groomother", "aruaru_answer_groomothercat"].includes(value.data)){
             return value;
           }
           throw new Error();

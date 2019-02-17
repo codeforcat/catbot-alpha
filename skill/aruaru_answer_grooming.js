@@ -22,7 +22,7 @@ module.exports = class AruaruAnswerGrooming {
             actions: [
               {
                 type: "postback",
-                label: "母ネコが子ネコにするのは？",
+                label: "母ネコが子ネコにするのは",
                 displayText: "母ネコが子ネコにするのは？",
                 data: "aruaru_answer_groomchild"
               }
