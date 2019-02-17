@@ -101,7 +101,7 @@ module.exports = class EnviromentQuizLike {
 
   async finish(bot, event, context) {
     console.log(context.confirmed);
-    let intents = ["food_mame_water","food_mame_milk","food_quiz_noteat","","","","",""];
+    let intents = ["environment_mame_catforwarding","environment_mame_catforwarding","","","","","",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.reply({
