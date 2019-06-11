@@ -4,7 +4,7 @@ module.exports = class ChiikinekoSelectTrouble {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "どんなトラブルがある？困ったとい言うだけでは何も解決しませんよ。"
+      text: "どんなトラブルがある？困ったと言うだけでは何も解決しませんよ。"
     });
     await bot.queue({
       type: "text",
