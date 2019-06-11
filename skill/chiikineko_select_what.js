@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = class FoodSelect {
+module.exports = class ChiikinekoSelectWhat {
 
   constructor() {
     this.clear_context_on_finish = true;
@@ -8,34 +8,39 @@ module.exports = class FoodSelect {
       question: {
         message_to_confirm: {
           type: "template",
-          altText: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
+          altText: "どれが気になる？",
           template: {
             type: "buttons",
-            text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
+            text: "どれが気になる？",
             actions: [{
                 type: "postback",
-                label: "ご飯の基本",
-                displayText: "ご飯の基本",
-                data: "food_select_basic"
+                label: "地域猫",
+                displayText: "地域猫",
+                data: "chiikineko_answer_chiikineko"
               },
               {
                 type: "postback",
-                label: "いろんな種類があるけど？",
-                displayText: "いろんな種類があるけど？",
-                data: "food_select_donteat"
+                label: "そと猫",
+                displayText: "そと猫",
+                data: "chiikineko_answer_outside"
               },
               {
                 type: "postback",
-                label: "水のあげ方は？",
-                displayText: "水のあげ方は？",
-                // data: "food_quiz_noteat"
-                data: "food_select_water"
+                label: "のら猫",
+                displayText: "のら猫",
+                data: "chiikineko_answer_nora"
+              },
+              {
+                type: "postback",
+                label: "うち猫",
+                displayText: "うち猫",
+                data: "chiikineko_answer_house"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select_water", "food_select_donteat", "food_select_basic"].includes(value.data)){
+          if (["chiikineko_answer_chiikineko", "chiikineko_answer_outside", "chiikineko_answer_nora", "chiikineko_answer_house"].includes(value.data)){
             return value;
           }
           throw new Error();
@@ -55,7 +60,6 @@ module.exports = class FoodSelect {
 
   async finish(bot, event, context) {
     let intent_name = context.confirmed.question.data;
-    console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name
     });

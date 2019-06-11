@@ -12,7 +12,8 @@ module.exports = class RichmenuTeacherQuiz {
       "toilet_quiz_do",
       "enviroment_quiz_like",
       "enviroment_quiz_notroom",
-      "aruaru_quiz_sign"
+      "aruaru_quiz_sign",
+      "chiikineko_quiz_howmany"
     ];
     let random_intent = Math.floor(Math.random() * intents.length);
 
