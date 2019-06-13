@@ -60,9 +60,8 @@ module.exports = class ChiikinekoAnswerHouserule {
     let intents = ["chiikineko_mame_tnr","","",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
-      await bot.reply({
-        type: "text",
-        text: "どんなことが聞きたい？"
+      await bot.switch_skill({
+        name: "chiikineko_select"
       });
     }
     if (intent_name == "") {
