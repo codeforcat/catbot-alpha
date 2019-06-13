@@ -94,12 +94,24 @@ module.exports = class RichmenuSelectTheme {
                     data: "care_select"
                   }
                 ]
+              },
+              {
+                thumbnailImageUrl: "https://code4cat.org/catbot/theme_chiikineko_thumbnail.jpg",
+                title: "地域猫のこと",
+                text: "地域猫って知ってる？",
+                actions: [
+                  {
+                    type: "postback",
+                    label: "知りたい！",
+                    data: "chiikineko_select"
+                  }
+                ]
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select", "toilet_select", "environment_select", "housesitting_select", "aruaru_select", "friendly_select", "care_select"].includes(value.data)){
+          if (["food_select", "toilet_select", "environment_select", "housesitting_select", "aruaru_select", "friendly_select", "care_select", "chiikineko_select"].includes(value.data)){
             return value;
           }
           throw new Error();

@@ -34,7 +34,7 @@ module.exports = class ToiletSelect {
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["toilet_select_basic", "toilet_select_cleaning", "toilet_select_frequency","toilet_quiz_do"].includes(value.data)){
+          if (["toilet_select_basic", "toilet_select_cleaning", "toilet_select_frequency"].includes(value.data)){
             return value;
           }
           throw new Error();

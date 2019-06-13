@@ -40,7 +40,6 @@ module.exports = class EnviromentQuizLike {
           throw new Error();
         },
         reaction: async (error, value, bot, event, context) => {
-          console.log("FoodQuizNoEat reaction");
           if (error) {
             bot.change_message_to_confirm("quiz", {
               type: "text",

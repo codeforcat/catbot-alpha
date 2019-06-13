@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = class FoodSelect {
+module.exports = class ChiikinekoSelectRule {
 
   constructor() {
     this.clear_context_on_finish = true;
@@ -8,34 +8,39 @@ module.exports = class FoodSelect {
       question: {
         message_to_confirm: {
           type: "template",
-          altText: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
+          altText: "どれが気になる？",
           template: {
             type: "buttons",
-            text: "ご飯が気になるんだね、ご飯のどういったところが気になっているのかな？",
+            text: "どれが気になる？",
             actions: [{
                 type: "postback",
-                label: "ご飯の基本",
-                displayText: "ご飯の基本",
-                data: "food_select_basic"
+                label: "不妊去勢手術",
+                displayText: "不妊去勢手術",
+                data: "chiikineko_answer_neuter"
               },
               {
                 type: "postback",
-                label: "いろんな種類があるけど？",
-                displayText: "いろんな種類があるけど？",
-                data: "food_select_donteat"
+                label: "エサのルール",
+                displayText: "エサのルール",
+                data: "chiikineko_answer_food"
               },
               {
                 type: "postback",
-                label: "水のあげ方は？",
-                displayText: "水のあげ方は？",
-                // data: "food_quiz_noteat"
-                data: "food_select_water"
+                label: "環境美化",
+                displayText: "環境美化",
+                data: "chiikineko_answer_environment"
+              },
+              {
+                type: "postback",
+                label: "トイレの設置",
+                displayText: "トイレの設置",
+                data: "chiikineko_answer_toilet"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["food_select_water", "food_select_donteat", "food_select_basic"].includes(value.data)){
+          if (["chiikineko_answer_neuter", "chiikineko_answer_food", "chiikineko_answer_environment", "chiikineko_answer_toilet"].includes(value.data)){
             return value;
           }
           throw new Error();
@@ -55,7 +60,6 @@ module.exports = class FoodSelect {
 
   async finish(bot, event, context) {
     let intent_name = context.confirmed.question.data;
-    console.log("*******ToiletWhyMulti*******intent_name ********: "+intent_name);
     await bot.switch_skill({
       name: intent_name
     });
