@@ -1,56 +1,60 @@
 'use strict';
 
 module.exports = class ChiikinekoQuizHowmany {
+  async begin(bot, event, context) {
+    await bot.queue({
+      type: "text",
+      text: "不妊手術をしていないメスの子猫がソト猫だとすると、１年に何匹になると思いますか？"
+    });
+    await bot.queue({
+      type: "text",
+      text: "正解は91匹だよ。"
+    });
+    await bot.queue({
+      type: "text",
+      text: "１匹のメスが、年に3回、5匹のメスを生んで、15匹。その半年後、15匹のメスが５匹のメスを生むと、90匹、親、子、孫合わせて、91匹となります。"
+    });
+  }
+
   constructor() {
     this.clear_context_on_finish = true;
     this.required_parameter = {
-      quiz: {
+      another_q: {
         message_to_confirm: {
           type: "template",
-          altText: "不妊手術をしていないメスの子猫がソト猫だとすると、１年に何匹になると思いますか？",
+          altText: "もっと知りたい？",
           template: {
-            type: "buttons",
-            text: "不妊手術をしていないメスの子猫がソト猫だとすると、１年に何匹になると思いますか？",
-            actions: [{
+            type: "confirm",
+            text: "もっと知りたい？",
+            actions: [
+              {
                 type: "postback",
-                label: "①11匹",
-                displayText: "①11匹",
-                data: "1"
+                label: "はい",
+                displayText: "はい",
+                data: "はい"
               },
               {
                 type: "postback",
-                label: "②31匹",
-                displayText: "②31匹",
-                data: "2"
-              },
-              {
-                type: "postback",
-                label: "③51匹",
-                displayText: "③51匹",
-                data: "3"
-              },
-              {
-                type: "postback",
-                label: "④91匹",
-                displayText: "④91匹",
-                data: "4"
+                label: "いいえ",
+                displayText: "いいえ",
+                data: "いいえ"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          console.log("value: " + value.data);
-          if (["1", "2", "3", "4"].includes(value.data)) {
+          if (["はい", "いいえ"].includes(value.data)){
             return value;
           }
           throw new Error();
         },
         reaction: async (error, value, bot, event, context) => {
-          if (error) {
-            bot.change_message_to_confirm("quiz", {
+          if (error){
+            await bot.reply({
               type: "text",
-              text: "選択肢を入れてほしいニャ。"
+              text: "にゃ？\nもう一度言ってほしいにゃ。"
             });
+            await bot.init();
           }
         }
       }
@@ -58,25 +62,24 @@ module.exports = class ChiikinekoQuizHowmany {
   }
 
   async finish(bot, event, context) {
-    let data = context.confirmed.quiz.data;
-
-    if (data !== "4") {
-      await bot.queue({
-        type: "text",
-        text: "残念！正解は④91匹だよ。"
+    console.log(context.confirmed);
+    let intents = ["chiikineko_mame_tnr","","",""];
+    let intent_name = intents[Math.floor(Math.random()*intents.length)];
+    if (context.confirmed.another_q.data == "はい") {
+      await bot.switch_skill({
+        name: "chiikineko_select"
       });
     } else {
-      await bot.queue({
-        type: "text",
-        text: "正解！"
-      });
+      if (intent_name == "") {
+        await bot.reply({
+          type: "text",
+          text: "また来てね！"
+        });
+      } else {
+        await bot.switch_skill({
+          name: intent_name
+        });
+      }
     }
-    await bot.reply({
-      type: "text",
-      text: "１匹のメスが、年に3回、5匹のメスを生んで、15匹。その半年後、15匹のメスが５匹のメスを生むと、90匹、親、子、孫合わせて、91匹となります。"
-    });
-    await bot.switch_skill({
-      name: "chiikineko_more_confirm"
-    });
   }
 };
