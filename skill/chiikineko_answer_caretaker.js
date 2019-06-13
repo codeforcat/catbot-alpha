@@ -63,16 +63,17 @@ module.exports = class ChiikinekoAnswerCaretaker {
       await bot.switch_skill({
         name: "chiikineko_select"
       });
-    }
-    if (intent_name == "") {
-      await bot.reply({
-        type: "text",
-        text: "また来てね！"
-      });
-    }else{
-      await bot.switch_skill({
-        name: intent_name
-      });
+    } else {
+      if (intent_name == "") {
+        await bot.reply({
+          type: "text",
+          text: "また来てね！"
+        });
+      } else {
+        await bot.switch_skill({
+          name: intent_name
+        });
+      }
     }
   }
 };
