@@ -54,23 +54,15 @@ module.exports = class ChiikinekoAnswerPeriod {
   }
 
   async finish(bot, event, context) {
-    let intents = ["chiikineko_mame_tnr","","",""];
-    let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
       await bot.switch_skill({
         name: "chiikineko_select"
       });
     } else {
-      if (intent_name == "") {
-        await bot.reply({
-          type: "text",
-          text: "また来てね！"
-        });
-      } else {
-        await bot.switch_skill({
-          name: intent_name
-        });
-      }
+      await bot.reply({
+        type: "text",
+        text: "また来てね！"
+      });
     }
   }
 };
