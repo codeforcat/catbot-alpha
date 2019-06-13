@@ -6,7 +6,7 @@ module.exports = class ChiikinekoMameTnr {
   }
 
   async finish(bot, event, context){
-    await bot.queue({
+    await bot.reply({
       type: "text",
       text: "TNRって知ってますか？\n" +
         "\n" +
