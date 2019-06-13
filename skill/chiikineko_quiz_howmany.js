@@ -71,9 +71,12 @@ module.exports = class ChiikinekoQuizHowmany {
         text: "正解！"
       });
     }
-    await bot.reply({
+    await bot.queue({
       type: "text",
       text: "１匹のメスが、年に3回、5匹のメスを生んで、15匹。その半年後、15匹のメスが５匹のメスを生むと、90匹、親、子、孫合わせて、91匹となります。"
+    });
+    await bot.switch_skill({
+      name: "chiikineko_more_confirm"
     });
   }
 };

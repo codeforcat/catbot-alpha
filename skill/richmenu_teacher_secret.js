@@ -25,8 +25,7 @@ module.exports = class RichmenuTeacherSecret {
       "friendly_mame_matatabi",
       "care_mame_tooth",
       "care_mame_toothstay",
-      "care_mame_catgrass",
-      "chiikineko_mame_tnr"
+      "care_mame_catgrass"
     ];
     let random_intent = Math.floor(Math.random() * intents.length);
 
