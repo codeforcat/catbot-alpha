@@ -41,12 +41,18 @@ module.exports = class ChiikinekoSelectTrouble {
                 label: "飼い猫の飼い主",
                 displayText: "飼い猫の飼い主",
                 data: "chiikineko_answer_owner"
+              },
+              {
+                type: "postback",
+                label: "TNRって？",
+                displayText: "TNRって？",
+                data: "chiikineko_mame_tnr"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["chiikineko_answer_caretaker", "chiikineko_answer_owner"].includes(value.data)){
+          if (["chiikineko_answer_caretaker", "chiikineko_answer_owner", "chiikineko_mame_tnr"].includes(value.data)){
             return value;
           }
           throw new Error();

@@ -29,12 +29,18 @@ module.exports = class ChiikinekoSelectBreed {
                 label: "一度に何匹生む？",
                 displayText: "一度に何匹生む？",
                 data: "chiikineko_answer_howmany"
+              },
+              {
+                type: "postback",
+                label: "不妊手術をしていないと？",
+                displayText: "不妊手術をしていないと？",
+                data: "chiikineko_quiz_howmany"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["chiikineko_answer_rate", "chiikineko_answer_period", "chiikineko_answer_howmany"].includes(value.data)){
+          if (["chiikineko_answer_rate", "chiikineko_answer_period", "chiikineko_answer_howmany", "chiikineko_quiz_howmany"].includes(value.data)){
             return value;
           }
           throw new Error();
