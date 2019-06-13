@@ -14,10 +14,10 @@ module.exports = class ChiikinekoAnswerOutside {
       another_q: {
         message_to_confirm: {
           type: "template",
-          altText: "もっと質問あるにゃ？",
+          altText: "もっと知りたい？",
           template: {
             type: "confirm",
-            text: "もっと質問あるにゃ？",
+            text: "もっと知りたい？",
             actions: [
               {
                 type: "postback",

@@ -14,10 +14,10 @@ module.exports = class ChiikinekoAnswerPeriod {
       another_q: {
         message_to_confirm: {
           type: "template",
-          altText: "もっと質問あるにゃ？",
+          altText: "もっと知りたい？",
           template: {
             type: "confirm",
-            text: "もっと質問あるにゃ？",
+            text: "もっと知りたい？",
             actions: [
               {
                 type: "postback",
@@ -54,7 +54,6 @@ module.exports = class ChiikinekoAnswerPeriod {
   }
 
   async finish(bot, event, context) {
-    console.log(context.confirmed);
     let intents = ["chiikineko_mame_tnr","","",""];
     let intent_name = intents[Math.floor(Math.random()*intents.length)];
     if (context.confirmed.another_q.data == "はい") {
