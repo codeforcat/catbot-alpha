@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class AruaruAnswerKakaka {
+module.exports = class AruaruAnswerApproachbite {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class AruaruAnswerSpreadeyes {
+module.exports = class AruaruAnswerCoperun {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
