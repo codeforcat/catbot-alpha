@@ -4,7 +4,7 @@ module.exports = class AruaruAnswerCopedrop {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "それは、緊張しているときかもしれませんね。ネコ同士のケンカでも、どちらかが目をそらすまで瞬きはしません。"
+      text: "ネコがモノを落とすことを防ぐのは無理なので、落とされたら困るものを置かないようにする、これしかありません。"
     });
   }
 

@@ -7,10 +7,10 @@ module.exports = class EnvironmentSelectLike {
       environment_like: {
         message_to_confirm: {
           type: "template",
-          altText: "トイレの基本は、こんなことがあるよ。何を知りたい？",
+          altText: "こんな場所が好きなんだよ。どれが気になる？",
           template: {
             type: "buttons",
-            text: "トイレの基本は、こんなことがあるよ。何を知りたい？",
+            text: "こんな場所が好きなんだよ。どれが気になる？",
             actions: [
               {
                 type: "postback",

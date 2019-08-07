@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class HousesittingAnswerOpencartain {
+module.exports = class HousesittingAnswerWalk {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
