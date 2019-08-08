@@ -4,7 +4,7 @@ module.exports = class FriendlyAnswerLoud {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "お気に入りのおもちゃで遊んだり、丸めたレジ袋やリボンでじゃらしたり、形にはこだわらず、ネコの好奇心を刺激してあげましょう。"
+      text: "ネコは大きな声や音が嫌いです。歌を歌うと怒るネコ、くしゃみや咳を嫌がるネコもいます。"
     });
   }
 

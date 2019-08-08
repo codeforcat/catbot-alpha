@@ -7,10 +7,10 @@ module.exports = class FriendlySelectDont {
       friendly_dont: {
         message_to_confirm: {
           type: "template",
-          altText: "嫌なことはしてほしくないな。どんなことが気になる？",
+          altText: "嫌なことはしてほしくないな。どれが気になる？",
           template: {
             type: "buttons",
-            text: "嫌なことはしてほしくないな。どんなことが気になる？",
+            text: "嫌なことはしてほしくないな。どれが気になる？",
             actions: [
               {
                 type: "postback",
