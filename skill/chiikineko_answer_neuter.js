@@ -4,7 +4,7 @@ module.exports = class ChiikinekoAnswerNeuter {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
-      text: "不妊去勢手術をしているので子猫は生まれません。不妊去勢手術済みの印が耳カット、「さくらみみ」と言います。耳カットされた猫を「さくらねこと言います。"
+      text: "不妊去勢手術をしているので子猫は生まれません。不妊去勢手術済みの印が耳カット、「さくらみみ」と言います。耳カットされた猫を「さくらねこ」と言います。"
     });
   }
 

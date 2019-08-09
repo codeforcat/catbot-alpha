@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class ChiikinekoQuizHowmany {
+module.exports = class ChiikinekoAnswerHowmanyQuiz {
   async begin(bot, event, context) {
     await bot.queue({
       type: "text",

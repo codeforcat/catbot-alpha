@@ -34,13 +34,13 @@ module.exports = class ChiikinekoSelectBreed {
                 type: "postback",
                 label: "不妊手術をしていないと？",
                 displayText: "不妊手術をしていないと？",
-                data: "chiikineko_quiz_howmany"
+                data: "chiikineko_answer_howmany_quiz"
               }
             ]
           }
         },
         parser: async (value, bot, event, context) => {
-          if (["chiikineko_answer_rate", "chiikineko_answer_period", "chiikineko_answer_howmany", "chiikineko_quiz_howmany"].includes(value.data)){
+          if (["chiikineko_answer_rate", "chiikineko_answer_period", "chiikineko_answer_howmany", "chiikineko_answer_howmany_quiz"].includes(value.data)){
             return value;
           }
           throw new Error();

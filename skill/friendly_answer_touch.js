@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class FriendlyAnswerGoods {
+module.exports = class FriendlyAnswerTouch {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",

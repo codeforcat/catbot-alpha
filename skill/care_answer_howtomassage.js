@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class CareAnswerNotclaw {
+module.exports = class CareAnswerHowtomassage {
   async begin(bot, event, context){
     await bot.queue({
       type: "text",
