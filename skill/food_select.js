@@ -20,8 +20,8 @@ module.exports = class FoodSelect {
               },
               {
                 type: "postback",
-                label: "いろんな種類があるけど？",
-                displayText: "いろんな種類があるけど？",
+                label: "あげちゃいけないもの",
+                displayText: "あげちゃいけないもの",
                 data: "food_select_donteat"
               },
               {
